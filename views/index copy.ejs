@@ -1,0 +1,34 @@
+<h2>Navigate</h2>
+<div>
+    <a href="/items">
+        <div>View All Items</div>
+    </a>
+</div>
+
+<div>
+    <a href="/submit-item">
+        <div>Submit New Item</div>
+    </a>
+</div>
+<br/>
+<!-- list of items-->
+<h2>Items</h2>
+<div>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Job</th>
+        </tr>
+        <% if(items != '') { %>
+            <% items.forEach(function(item, index) { %>
+                <tr>
+                    <td><%- item.name %></td>
+                    <td><%- item.age %></td>
+                    <td><%- item.job %></td>
+                </tr>
+            <% }) %>        
+        <% } %>
+    </table>
+</div>
+

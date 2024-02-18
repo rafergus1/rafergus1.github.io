@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-lg-3 py-4">
+        <% if(recipes != '') { %>
+            <% recipes.forEach(function(item, index) { %>
+                <a href="/recipe-details?id=<%- item._id %>" class="col recipe-item-link bk-tile">
+                    <div class="row row-cols-2 recipe-item">
+                        <div class="col-3 align-items-center">
+                            <span class="<%- item.glassIcon %> icon-purple icon-xxl"></span>
+                        </div>
+                        <div class="col col-9 text-left">
+                            <div class="recipe-item-title text-truncate"><%- item.name %></div>
+                            <hr class="my-1"/>
+                            <% var ingredientString = ""; %>
+                            <% item.ingredients.forEach(function(ingredientItem) { ingredientString = ingredientString + ingredientItem.ingredient + ", "; })%>
+                            <div class="recipe-item-summary text-wrap text-truncate text-break">
+                                <%- ingredientString.replace(/,\s*$/, "") %>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            <% }) %>        
+        <% } %>
+    </div>
+</div>

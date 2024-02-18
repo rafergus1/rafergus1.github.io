@@ -1,0 +1,63 @@
+<div class="container rounded-2 bk-container shadow-lg">
+    <% if(item != null) { %>
+        <div class="row my-3 mx-2 px-3 pt-3 pb-1 hl-label">
+            <div class="col-12 f-header">
+                <div class="">
+                    <span><%- item.name %></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row my-3 mx-2 p-3 bk-tile rounded-2">
+            <div class="col-12">
+                <div class="mb-2 f-secondary">Ingredients</div>
+                <table class="table table-sm bk-tile text-nowrap br-secondary simple-table">
+                    <tbody>
+                        <% item.ingredients.forEach(function(ingredientItem) { %>
+                            <tr class="bk-tile">
+                                <td class="f-primary"><%- ingredientItem.ingredient %></td>
+                                <td class="f-primary"><%- ingredientItem.quantity %> <%- ingredientItem.units %></td>
+                            </tr>
+                        <% }) %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="row my-3 mx-2 p-3 bk-tile rounded-2">
+            <div class="col-12">
+                <div class="mb-2 f-secondary">Instructions</div>
+                <div class="f-primary f-multiline"><%- item.instructions %></div>
+            </div>
+        </div>
+            
+        <div class="row my-3 mx-2">
+            <div class="col-9" style="padding-left: 0px; padding-right:3px">
+                <div class="bk-tile rounded-2 p-3" style="width:100%; height:100%">
+                    <div class="mb-2 f-secondary">Glassware</div>
+                    <div class="f-primary f-multiline"><%- item.glassware %>, <%- item.rocks %></div>
+                </div>
+            </div>
+            <div class="col-3" style="padding-right: 0px; padding-left-3: px;">
+                <div class="bk-tile rounded-2 align-items-center p-3" style="width:100%; height:100%">
+                    <div class="<%- drinkIcon %> icon-purple icon-lg" style="text-align: center;"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3 mx-2 p-3 bk-tile rounded-2">
+            <div class="col-12">
+                <div class="mb-2 f-secondary">Comments</div>
+                <div class="f-primary f-multiline"><%- item.notes %></div>
+            </div>
+        </div>
+
+        <div class="row mb-4 mx-4 p-3">
+            <div class="col-12 f-tertiary text-end f-multiline"><%- item.tags %></div>
+        </div>
+        
+    <% } else{ %>
+        <div class="alert alert-danger" role="alert">Error finding recipe!</div>
+    <% } %>
+</div>
+

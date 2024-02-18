@@ -1,0 +1,156 @@
+.recipe-item-link {
+ text-decoration: none;
+ color: #000000;
+ white-space: nowrap;
+ font-size: 18px;
+ width: 600px;
+ height: 160px;
+ border-radius: 5px;
+ margin-bottom: 5px;
+ margin-right: 5px;
+}
+
+.recipe-item {
+	height: 160px;
+	width: 600px;
+}
+
+.recipe-item-title {
+	font-size: 18pt;
+	font-weight: bold;
+}
+
+.recipe-item-summary {
+	font-size: 14pt;
+	font-weight: normal;
+	color: #636464;
+	height: 95px;
+}
+
+.recipe-instructions {
+	color:#c20808;
+	white-space: pre-wrap;
+	font-size: 20pt;
+}
+.recipe-comments {
+	white-space: pre;
+	font-size: 20pt;
+	background: #636464;
+}
+.recipe-tags {
+	white-space: pre;
+	font-size: 20pt;
+	background: #636464;
+}
+
+.entry-form-header {
+	background-color: #a3c6fa;
+	font: bold 16pt Arial;
+	padding: 5px;
+}
+.entry-form {
+	border-style: solid;
+	border-width: 2px;
+	border-color: #a3c6fa;
+	background: #dbe8fc;
+	margin: 10px;
+	padding: 0px;
+	border-radius: 7px;
+}
+
+.entry-form-item {
+	padding-left: 10px;
+	padding-top: 10px;
+	padding-right: 10px;
+}
+
+
+
+
+
+.simple-table tr:last-child td {
+	border-bottom: none;
+}
+
+.hl-label {
+	position: relative;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: solid;
+	border-width: 2px;
+	border-color: #bb86fc;
+}
+/* .hl-label:before {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 2px;
+	background: #bb86fc;
+	top: 50%;
+	position: relative;
+}
+.hl-label:after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 2px;
+	background: #bb86fc;
+	top: 50%;
+	position: relative;
+} */
+
+
+.bk-page {
+	background-color: #292929;
+}
+.bk-container {
+	border-radius: 2px;
+	background-color: #121212;
+}
+.bk-tile {
+	border-radius: 2px;
+	background-color: #1e1e1e;
+	color: #ffffff;
+}
+.br-secondary {
+	border-color: #a0a0a0;
+}
+.f-tertiary {
+	font-family: "Montserrat", sans-serif;
+	font-size: 12pt;
+	color: #a0a0a0;
+}
+.f-secondary {
+	font-family: "Montserrat", sans-serif;
+	font-size: 12pt;
+	color: #a0a0a0;
+}
+.f-primary {
+	font-family: "Montserrat", sans-serif;
+	font-size: 16pt;
+	color: #ffffff;
+}
+.f-header {
+	font-family: "Montserrat", sans-serif;
+	font-size: 20pt;
+	font-weight: bold;
+	color: #bb86fc;
+}
+.f-multiline {
+	white-space: pre-wrap;
+	word-wrap: normal;
+}
+
+.icon-purple {
+	color: #bb86fc;
+}
+.icon-sm {
+	font-size: 48pt;
+}
+.icon-lg {
+	font-size: 70pt;
+}
+.icon-xxl {
+	font-size: 120pt;
+}

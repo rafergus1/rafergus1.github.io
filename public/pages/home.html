@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title> Javascript and MongoDB Example </title>
+		<link rel="stylesheet" type="text/css" href="./css/style.css" />
+	</head>
+
+	<body>
+		<!-- bootstrap
+		<div  class="container-xxl px-md-5 bg-white shadow-lg">
+			<header copy this from bootstrap examples>
+			</header>
+			
+			put the body here, but use layouts for the pages.
+
+		</div>
+		-->
+		<div class="entry-form">
+			<div class="entry-form-header">
+				Registration Form
+			</div>
+			<form action="results.html" method="post">
+				<div class="entry-form-item">
+					<label for="name">Name</label>
+					<input type="text" name="name" id="txtUsername" placeholder="UserName" required>
+				</div>
+				<div class="entry-form-item">
+					<label for="password">Password</label>
+					<input type="password" name="password" id="txtPassword" placeholder="" required>
+				</div>
+				<div class="entry-form-item">
+					<label for="date">SomeDate</label>
+					<input type="date" name="date" id="date">
+				</div>
+				<div class="entry-form-item">
+					<label for="country">Country</label>
+					<select id="ddCountry" name="country">
+						<option value="usa" selected>USA</option>
+						<option value="canada">Canada, eh?</option>
+						<option value="japan">Japan</option>
+					</select>
+				</div>
+				<div class="entry-form-item">
+					<button type="reset">Clear</button>
+					<button type="submit" id="btnSubmit">Submit</button>
+				</div>
+			</form>
+		</div>
+
+		
+		<script type="module" src="./js/main.js"></script>
+	</body>
+</html>

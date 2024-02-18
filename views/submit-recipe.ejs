@@ -1,0 +1,102 @@
+<div class="entry-form">
+    <div class="entry-form-header">
+        Recipe Submit Form
+    </div>
+    <div>
+        <% if(infoSubmitObj != '') { %>
+            <div class="alert alert-success" role="alert"><!--Use the messages from bootstrap for the success message-->
+                <%= infoSubmitObj %>
+            </div>
+        <% } %>
+
+        <% if(infoErrorsObj != '') { %>
+            <div class="alert alert-danger" role="alert"><!--Use the messages from bootstrap for the success message-->
+                <%= infoErrorsObj[0].message %>
+            </div>
+        <% } %>
+    </div>
+
+    <form action="/submit-recipe" method="post">
+        <div class="my-3 mx-3">
+            <label for="frmName" class="form-label">Name</label>
+            <input type="text" class="form-control" name="frmName" id="frmName" placeholder="enter name" required>
+        </div>
+
+        <div class="ingredientList  mb-1 mx-3">
+            <label class="form-label">Ingredients</label>
+            <!--<div class="ingredientDiv mb-1">   --> 
+                <div class="input-group mb-1 ingredientDiv" name="ingredientDiv">
+                    <input class="form-control ingredient w-50" name="frmIngredient" id="frmIngredient" placeholder="The good stuff..." required>
+                    <input class="form-control ingredient-qty w-20" name="frmIngredientQty" id="frmIngredientQty" placeholder="qty" required>
+                    <select class="form-control ingredient-units w-20" name="frmIngredientUnit" id="frmIngredientUnit" required>
+                        <option value="oz">oz</option>
+                        <option value="dashes">dashes</option>
+                        <option value="drops">drops</option>
+                        <option value="grams">grams</option>
+                        <option value="sprigs">sprigs</option>
+                        <option value="wedge">wedge</option>
+                        <option value="slice">slice</option>
+                        <option value="twist">twist</option>
+                        <option value="peel">peel</option>
+                        <option value="ml">ml</option>
+                        <option value="piece">piece</option>
+                        <option value="na">n/a</option>
+                    </select>
+                    <button class="btn btn-outline-danger ingredient-delete w-5" type="button" id="btnRemoveIngredient">X</button>
+                </div>
+            <!--</div>-->
+        </div>
+        <div class="mb-3 mx-3">
+            <button class="btn btn-outline-primary btn-sm" type="button" id="btnAddIngredient" name="btnAddIngredient">+ Add Ingredient</button>
+        </div>
+
+        <div class="mb-3 mx-3">
+            <label for="frmInstructions" class="form-label">Instructions</label>
+            <textarea class="form-control" name="frmInstructions" id="frmInstructions" placeholder="" style="height: 200px" required></textarea>
+        </div>
+        <div class="row mx-1">
+            <div class="col">
+                <label for="frmGlassware" class="form-label">Glassware</label>
+                <select class="form-control" name="frmGlassware" id="frmGlassware" required>
+                    <option value="Coupe">Coupe</option>
+                    <option value="Rocks">Rocks/Tumbler</option>
+                    <option value="Colins">Colins</option>
+                    <option value="Cocktail">Cocktail/Martini</option>
+                    <option value="Shot">Shot</option>
+                    <option value="NickNora">Nick & Nora</option>
+                    <option value="Mule">Mule</option>
+                    <option value="Mug">Mug</option>
+                    <option value="IrishCoffee">Irish Coffee</option>
+                </select>
+            </div>
+            <div class="col">
+                <label for="frmRocks" class="form-label">Rocks</label>
+                <select class="form-control" name="frmRocks" id="frmRocks" required>
+                    <option value="Neat">Neat</option>
+                    <option value="LargeRock">Large Rock</option>
+                    <option value="Rocks">Rocks</option>
+                    <option value="Crushed">Crushed</option>
+                    <option value="Pebbles">Pebbles</option>
+                </select>
+            </div>
+        </div>
+        <div class="my-3 mx-3">
+            <label for="frmTags" class="form-label">Tags</label>
+            <input type="text" class="form-control" name="frmTags" id="frmTags" placeholder="easy complex light winter summer ...">
+        </div>
+        <div class="mb-3 mx-3">
+            <label for="frmNotes" class="form-label">Coments</label>
+            <textarea class="form-control" name="frmNotes" id="frmNotes" placeholder="" style="height: 100px"></textarea>
+        </div>
+        <div class="form-check mb-3 mx-3">
+            <input class="form-check-input" type="checkbox" name="frmToTry" id="frmToTry"></textarea>
+            <label for="frmToTry" class="form-label">To Try</label>
+        </div>
+        <div class="mb-3 mx-3">
+            <button type="reset" class="btn btn-outline-secondary">Clear</button>
+            <button type="submit" class="btn btn-primary" id="btnSubmit">Submit</button>
+        </div>
+    </form>
+</div>
+
+<script type="module" src="./js/main.js"></script>
